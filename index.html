@@ -1,0 +1,1638 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script>
+			function rmurl(e) {
+				var t = new RegExp(/\?m=0|&m=0|\?m=1|&m=1/g);
+				return (
+					t.test(e) &&
+						((e = e.replace(t, '')),
+						window.history.replaceState({}, document.title, e)),
+					e
+				);
+			}
+			const currentUrl = rmurl(location.toString());
+			'dark' == localStorage.getItem('theme') &&
+				(document.querySelector('html').className = 'dark-mode');
+		</script>
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="general" name="rating" />
+		<meta content="#ffffff" name="theme-color" />
+		<meta content="jettheme-blogger" name="application-name" />
+		<meta content="#ffffff" name="msapplication-TileColor" />
+		<link href="favicon.ico" rel="icon" type="image/x-icon" />
+
+		<title>Online degrees - online degrees</title>
+
+		<meta content="Online degrees – online degrees" name="title" />
+		<meta content="Online degrees – online degrees" property="og:title" />
+		<meta content="Online degrees – online degrees" name="twitter:title" />
+
+		<meta property="og:image" />
+		<meta name="twitter:image" />
+
+		<meta
+			content="Find online courses and degrees from leading universities or organisations and start learning online today | onlinedegreeforcriminaljustice for you here"
+			name="description"
+		/>
+		<meta
+			content="Find online courses and degrees from leading universities or organisations and start learning online today | onlinedegreeforcriminaljustice for you here"
+			property="og:description"
+		/>
+		<meta
+			content="Find online courses and degrees from leading universities or organisations and start learning online today | onlinedegreeforcriminaljustice for you here"
+			name="twitter:description"
+		/>
+
+		<meta
+			content="https://www.onlinedegreeforcriminaljustice.com/"
+			property="og:url"
+		/>
+		<meta content="website" property="og:type" />
+
+		<meta content="Online degrees" property="og:site_name" />
+		<meta
+			content="https://www.onlinedegreeforcriminaljustice.com/"
+			property="og:url"
+		/>
+		<meta content="website" property="og:type" />
+		<meta content="Online degrees" property="og:image:alt" />
+
+		<meta content="summary_large_image" name="twitter:card" />
+
+		<meta
+			content="https://www.onlinedegreeforcriminaljustice.com/"
+			name="twitter:url"
+		/>
+		<meta content="Online degrees" name="twitter:image:alt" />
+
+		<link
+			href="npm/bootstrap-5.0.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<style id="page-skin-1" type="text/css">
+			:root {
+				--jt-primary: #f67938;
+				--jt-text-color: #686868;
+				--jt-heading-color: #0000cd;
+				--jt-link-color: #0000cd;
+				--jt-link-hover: #0000cd;
+				--jt-blockquote: #343a40;
+				--jt-btn-primary: #f67938;
+				--jt-btn-primary-hover: #f46013;
+				--jt-btn-light-hover: #0000cd;
+				--jt-border-light: #efefef;
+				--jt-bg-light: #f3f7f9;
+				--jt-bg-archive: #fffff;
+				--jt-nav-text: #0000cd;
+				--jt-nav-hover: #f67938;
+				--jt-nav-active: #0000cd;
+				--jt-nav-mobile: #ffffff;
+				--jt-bg-body: #ffffff;
+				--jt-bg-header: #ffffff;
+				--jt-bg-footer: #212529;
+				--jt-text-footer: #9fa6ad;
+				--jt-bg-dropdown: #ffffff;
+				--jt-dropdown-text: #0000cd;
+				--jt-dropdown-hover: #f67938;
+			}
+			.dark-mode {
+				--jt-primary: #f67938;
+				--jt-text-color: #9fa6ad;
+				--jt-heading-color: #9fa6ad;
+				--jt-link-color: #0000cd;
+				--jt-link-hover: #0000cd;
+				--jt-blockquote: #343a40;
+				--jt-btn-primary: #f67938;
+				--jt-btn-primary-hover: #f46013;
+				--jt-btn-light-hover: #ffffff;
+				--jt-border-light: #323539;
+				--jt-bg-light: #292d31;
+				--jt-bg-archive: #292d31;
+				--jt-nav-text: #9fa6ad;
+				--jt-nav-hover: #ffffff;
+				--jt-nav-active: #0000cd;
+				--jt-nav-mobile: #212529;
+				--jt-bg-body: #212529;
+				--jt-bg-header: #212529;
+				--jt-bg-footer: #212529;
+				--jt-text-footer: #9fa6ad;
+				--jt-bg-dropdown: #292d31;
+				--jt-dropdown-text: #9fa6ad;
+				--jt-dropdown-hover: #ffffff;
+			}
+			body {
+				--bs-font-sans-serif: system-ui, -apple-system, Segoe UI, Helvetica Neue,
+					Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji,
+					Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+				font:
+					normal normal 16px system-ui,
+					-apple-system,
+					Segoe UI,
+					Helvetica Neue,
+					Arial,
+					Noto Sans,
+					Liberation Sans,
+					sans-serif,
+					Apple Color Emoji,
+					Segoe UI Emoji,
+					Segoe UI Symbol,
+					Noto Color Emoji;
+				color: var(--jt-text-color);
+				background-color: var(--jt-bg-body);
+				line-height: 1.5;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				text-rendering: optimizeLegibility;
+			}
+			.h1,
+			.h2,
+			.h3,
+			.h4,
+			.h5,
+			.h6,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font: normal bold 40px var(--bs-font-sans-serif);
+				line-height: 1.2;
+			}
+			a {
+				transition-property: background-color, border-color, color, fill, stroke;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+				transition-duration: 0.3s;
+				color: var(--jt-link-color);
+			}
+			a:hover {
+				color: var(--jt-link-hover);
+			}
+			blockquote {
+				color: var(--jt-blockquote);
+			}
+			.fs-7 {
+				font-size: 0.875rem;
+				line-height: 1.25rem;
+			}
+			.fs-8 {
+				font-size: 0.75rem;
+				line-height: 1rem;
+			}
+			.btn {
+				box-shadow: none !important;
+			}
+			.btn-sm {
+				min-width: 32px;
+				min-height: 32px;
+			}
+			img,
+			svg,
+			iframe {
+				max-width: 100%;
+			}
+			img {
+				height: auto;
+				object-fit: cover;
+			}
+			label {
+				cursor: pointer;
+			}
+			.visually-hidden {
+				position: unset !important;
+			}
+			.form-control,
+			.form-control:focus {
+				box-shadow: none;
+			}
+			.dropdown-menu {
+				margin: 0;
+				padding: 0;
+			}
+			.ratio:before {
+				content: none;
+			}
+			.ratio-1x1 {
+				padding-bottom: 100%;
+			}
+			.ratio-4x3 {
+				padding-bottom: 75%;
+			}
+			.ratio-16x9 {
+				padding-bottom: 56.25%;
+			}
+			.ratio-21x9 {
+				padding-bottom: 43%;
+			}
+			.modal {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				justify-content: center;
+				align-items: center;
+			}
+
+			.modal-content {
+				background: white;
+				padding: 50px 20px;
+				text-align: center;
+				width: 100%;
+				height: 100%;
+			}
+
+			.close {
+				position: absolute;
+				top: 10px;
+				right: 20px;
+				font-size: 24px;
+				cursor: pointer;
+			}
+
+			.object-cover {
+				object-fit: cover;
+			}
+			.jt-text-primary,
+			.hover-text-primary:hover,
+			input:checked ~ .check-text-primary {
+				color: var(--jt-primary) !important;
+			}
+			.jt-btn-primary,
+			.jt-btn-outline-primary:hover {
+				color: #fff;
+				background-color: var(--jt-btn-primary);
+				border-color: var(--jt-btn-primary);
+			}
+			.jt-btn-light {
+				color: var(--jt-text-color);
+				background-color: var(--jt-bg-light);
+				border-color: var(--jt-bg-light);
+			}
+			.jt-btn-light:hover {
+				color: var(--jt-btn-light-hover);
+			}
+			.jt-btn-primary:hover,
+			.hover-btn-primary:hover,
+			.jt-btn-primary:checked + .jt-btn-outline-primary {
+				color: #fff !important;
+				background-color: var(--jt-btn-primary-hover) !important;
+				border-color: var(--jt-btn-primary-hover) !important;
+			}
+			.jt-btn-outline-primary {
+				color: var(--jt-btn-primary);
+				border-color: var(--jt-btn-primary);
+			}
+			.jt-bg-primary {
+				background-color: var(--jt-primary);
+			}
+			.jt-bg-light {
+				background-color: var(--jt-bg-light);
+			}
+			.bg-archive {
+				background-color: var(--jt-bg-archive);
+			}
+			.jt-border-light {
+				border-color: var(--jt-border-light) !important;
+			}
+			input:checked ~ .d-block-check {
+				display: block !important;
+			}
+			input:checked ~ .d-none-check {
+				display: none !important;
+			}
+			.dropdown-menu,
+			.accordion-item,
+			.accordion-header {
+				background-color: var(--jt-bg-dropdown);
+				color: var(--jt-dropdown-text);
+				border-color: var(--jt-border-light);
+			}
+			.lazyload {
+				transition-property: opacity;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+				transition-duration: 0.3s;
+				opacity: 0;
+			}
+			.lazyload.loaded {
+				opacity: 1;
+			}
+			.cursor-default {
+				cursor: default !important;
+			}
+			.drag-scroll {
+				cursor: grab;
+			}
+			.drag-scroll.row > * {
+				max-width: 80%;
+			}
+			.drag-scroll.row-cols-2 > * {
+				max-width: 45%;
+			}
+			/* JetTheme Style */
+			.header-animate.header-hidden {
+				transform: translateY(-100%);
+				box-shadow: none !important;
+			}
+			#header {
+				background-color: var(--jt-bg-header);
+				transition-property: transform;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+				transition-duration: 0.3s;
+				min-height: 50px;
+			}
+			.jt-icon {
+				display: inline-block;
+				height: 1em;
+				vertical-align: -0.15em;
+				width: 1em;
+				fill: none;
+				stroke: currentColor;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+				stroke-width: 2;
+			}
+			.jt-icon-center {
+				font-family: 'Segoe UI', sans-serif;
+			}
+			#dark-toggler .icon-mode:before {
+				content: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.2em' height='1.2em' viewBox='0 0 24 24' fill='none' stroke='%23686868' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E");
+			}
+			.dark-mode #dark-toggler .icon-mode:before {
+				content: url("data:image/svg+xml;utf8,%3Csvg width='1.2em' height='1.2em' fill='white' stroke='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'%3E%3C/path%3E%3C/svg%3E");
+			}
+			#footer {
+				background-color: var(--jt-bg-footer);
+				color: var(--jt-text-footer);
+			}
+			#navbar {
+				z-index: 9999;
+			}
+			#navbar .menu-item {
+				position: relative;
+			}
+			#navbar .nav-link {
+				min-height: 40px;
+			}
+			#navbar .dropdown-toggle {
+				cursor: pointer;
+				align-items: center;
+				display: flex;
+			}
+			#navbar .navbar-nav > .menu-item > .nav-link {
+				font: normal bold 16px var(--bs-font-sans-serif);
+				line-height: 1.5;
+				color: var(--jt-nav-text);
+			}
+			#navbar .navbar-nav > .menu-item > .nav-link:hover {
+				color: var(--jt-nav-hover);
+			}
+			#navbar .navbar-nav > .menu-item > .nav-link.active {
+				color: var(--jt-nav-active);
+			}
+			.logo-wrap {
+				width: 200px;
+			}
+			#search-header .dropdown-menu {
+				min-width: 300px;
+				right: 0;
+				top: 100%;
+			}
+			.blog-admin {
+				display: none;
+			}
+			#pagination li + li {
+				margin-left: 5px;
+			}
+			.no-items {
+				display: none;
+			}
+			.separator {
+				margin-bottom: 1.5rem;
+			}
+			.separator a {
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+			.widget:last-child,
+			#special-categories .widget {
+				margin-bottom: 0 !important;
+			}
+			body > .google-auto-placed {
+				margin: 0 auto 1.5rem;
+				max-width: 1108px;
+			}
+			.google-auto-placed > ins {
+				margin: 0 !important;
+			}
+			#post-body .widget {
+				margin-top: 1.5rem;
+			}
+			.item-title,
+			.entry-title {
+				color: var(--jt-heading-color);
+			}
+			#comment-editor {
+				width: 100%;
+			}
+			/* TYPOGRAPY */
+			.h1,
+			h1 {
+				font-size: calc(1.375rem + 1.5vw);
+			}
+			.h2,
+			h2 {
+				font-size: calc(1.325rem + 0.9vw);
+			}
+			.h3,
+			h3 {
+				font-size: calc(1.3rem + 0.6vw);
+			}
+			.h4,
+			h4 {
+				font-size: calc(1.275rem + 0.3vw);
+			}
+			.h5,
+			h5 {
+				font-size: 18px;
+			}
+			.h6,
+			h6 {
+				font-size: 16px;
+			}
+			.entry-text h1,
+			.entry-text h2,
+			.entry-text h3,
+			.entry-text h4,
+			.entry-text h5,
+			.entry-text h6 {
+				color: var(--jt-heading-color);
+				padding-top: 1em;
+				margin-bottom: 1rem;
+			}
+			/* Responsive Style */
+			@media (min-width: 576px) {
+				.drag-scroll.row-cols-sm-2 > * {
+					max-width: 40%;
+				}
+				.drag-scroll.flex-lg-wrap {
+					cursor: default;
+				}
+				.drag-scroll.flex-sm-wrap > * {
+					max-width: none;
+				}
+				.ratio-sm-4x3 {
+					padding-bottom: 75%;
+				}
+				.ratio-sm-16x9 {
+					padding-bottom: 56.25%;
+				}
+				.border-sm-end {
+					border-right-width: 1px !important;
+					border-right-style: solid;
+				}
+				#post-pager .next-page {
+					border-left: 1px solid;
+				}
+			}
+			@media (min-width: 768px) {
+				.drag-scroll.row-cols-md-3 > * {
+					max-width: 30%;
+				}
+				.drag-scroll.flex-lg-wrap {
+					cursor: default;
+				}
+				.drag-scroll.flex-md-wrap > * {
+					max-width: none;
+				}
+				.position-md-relative {
+					position: relative;
+				}
+				.border-md-end {
+					border-right-width: 1px !important;
+					border-right-style: solid;
+				}
+			}
+			@media (min-width: 992px) {
+				.border-lg-end {
+					border-right-width: 1px !important;
+					border-right-style: solid;
+				}
+				.drag-scroll.row-cols-lg-4 > * {
+					max-width: 23%;
+				}
+				.drag-scroll.flex-lg-wrap {
+					cursor: default;
+				}
+				.drag-scroll.flex-lg-wrap > * {
+					max-width: none;
+				}
+				#navbar .navbar-nav > .menu-item {
+					display: flex;
+				}
+				#navbar .dropdown-menu {
+					margin-top: -10px;
+					display: block;
+					opacity: 0;
+					visibility: hidden;
+					pointer-events: none;
+					-webkit-transition: 0.3s;
+					-ms-transition: 0.3s;
+					-o-transition: 0.3s;
+					transition: 0.3s;
+					box-shadow: 5px 10px 10px -5px rgba(0, 0, 0, 0.14);
+					top: 100%;
+				}
+				#navbar .dropdown-menu .nav-link {
+					padding-right: 20px;
+					color: var(--jt-text-color);
+				}
+				#navbar .dropdown-menu .nav-link:hover {
+					color: var(--jt-dropdown-hover);
+				}
+				#navbar .dropdown-menu .dropdown-toggle {
+					position: absolute;
+					right: 10px;
+					top: 20px;
+				}
+				#navbar .dropdown-menu .dropdown-menu {
+					margin-right: -10px;
+					left: 100%;
+					top: -1px;
+				}
+				#navbar .menu-item:hover > .dropdown-menu {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: unset;
+					margin: 0;
+				}
+				#navbar .navbar-nav > .menu-item > .nav-link {
+					padding: 1.5rem 1rem;
+					white-space: nowrap;
+				}
+				#navbar .navbar-nav > .menu-item > .dropdown-toggle {
+					pointer-events: none;
+				}
+				#sidebar {
+					border-left: 1px solid;
+				}
+				#footer-widget .widget {
+					margin-bottom: 0 !important;
+				}
+			}
+			@media (min-width: 1200px) {
+				.h1,
+				h1 {
+					font-size: 40px;
+				}
+				.h2,
+				h2 {
+					font-size: 26px;
+				}
+				.h3,
+				h3 {
+					font-size: 22px;
+				}
+				.h4,
+				h4 {
+					font-size: 20px;
+				}
+			}
+			@media (max-width: 991.98px) {
+				input:checked ~ .dropdown-menu {
+					display: block;
+				}
+				input:checked + .dropdown-toggle {
+					color: var(--jt-nav-active);
+				}
+				.drag-scroll {
+					overflow-x: auto !important;
+				}
+				.logo-wrap {
+					width: 150px;
+				}
+				#search-header .dropdown-menu {
+					width: 100%;
+				}
+				#navbar {
+					background-color: var(--jt-nav-mobile);
+					padding-top: 70px;
+					padding-bottom: 30px;
+					position: fixed;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					width: auto;
+				}
+				#navbar.d-block {
+					opacity: 0;
+					transform: translateX(-20%);
+					-webkit-transition: 0.3s;
+					-ms-transition: 0.3s;
+					-o-transition: 0.3s;
+					transition: 0.3s;
+				}
+				#navbar.show {
+					transform: translateX(0);
+					opacity: 1;
+				}
+				#navbar .navbar-nav {
+					max-height: 100%;
+					overflow-y: auto;
+				}
+				#navbar-toggle:checked ~ #header-main #navbar {
+					display: block;
+				}
+				#navbar .nav-link {
+					border-bottom: 1px solid var(--jt-border-light);
+					color: var(--jt-text-color);
+				}
+				#navbar .nav-link:hover {
+					color: var(--jt-dropdown-hover);
+				}
+				#navbar .dropdown-toggle {
+					border-left: 1px solid var(--jt-border-light);
+					height: 2.5rem;
+					padding: 0 1rem;
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+				#navbar .dropdown-menu {
+					border: none;
+					padding-left: 10px;
+				}
+				#sidebar {
+					border-top: 1px solid;
+				}
+			}
+			@media (max-width: 575.98px) {
+				.feature-posts .item-thumbnail {
+					margin-bottom: -150px;
+				}
+				.feature-posts .item-thumbnail a {
+					border-radius: 0 !important;
+					box-shadow: none !important;
+					padding-bottom: 75%;
+				}
+				.feature-posts .item-content {
+					background-color: var(--jt-bg-body);
+					border: 5px solid;
+					border-radius: 0.25rem;
+				}
+				#post-pager .prev-page + .next-page {
+					border-top: 1px solid;
+				}
+				.feature-image,
+				.px-3 > .google-auto-placed,
+				.feature-posts .item-thumbnail {
+					margin-left: -1rem;
+					margin-right: -1rem;
+					width: auto !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header
+			class="header-animate sticky-top navbar py-0 navbar-expand-lg border-bottom jt-border-light"
+			content="itemid"
+			id="header"
+			itemid="#header"
+			itemscope="itemscope"
+			itemtype="https://schema.org/WPHeader"
+		>
+			<div
+				class="container position-relative px-3 flex-nowrap section"
+				id="header-main"
+			>
+				<div class="widget HTML" data-version="2" id="HTML50">
+					<a class="navbar-brand me-0 fw-bold" href="/"> Online degrees </a>
+				</div>
+				<div
+					class="widget LinkList d-flex align-self-stretch align-items-center order-lg-1 ms-auto"
+					data-version="2"
+					id="LinkList52"
+				>
+					<div class="d-flex pe-1 border-end jt-border-light">
+						<a
+							aria-label="facebook"
+							class="px-2 text-reset jt-icon-center i-facebook"
+							href="#"
+							rel="noopener"
+							target="_blank"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								class="jt-icon"
+							>
+								<path
+									d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 23.403.597 24 1.325 24H12.82V14.706h-3.205v-3.62h3.205V8.41c0-3.178 1.936-4.912 4.766-4.912 1.355 0 2.52.101 2.86.146v3.308h-1.96c-1.538 0-1.837.732-1.837 1.805v2.366h3.675l-.48 3.62h-3.195V24h6.265C23.403 24 24 23.403 24 22.676V1.325C24 .597 23.403 0 22.675 0z"
+								/>
+							</svg> </a
+						><a
+							aria-label="instagram"
+							class="px-2 text-reset jt-icon-center i-instagram"
+							href="#"
+							rel="noopener"
+							target="_blank"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								class="jt-icon"
+							>
+								<path
+									d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.95.25 2.66.53a5.41 5.41 0 0 1 1.96 1.28 5.41 5.41 0 0 1 1.28 1.96c.28.71.474 1.49.53 2.66.06 1.27.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.25 1.95-.53 2.66a5.41 5.41 0 0 1-1.28 1.96 5.41 5.41 0 0 1-1.96 1.28c-.71.28-1.49.474-2.66.53-1.27.06-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.95-.25-2.66-.53a5.41 5.41 0 0 1-1.96-1.28 5.41 5.41 0 0 1-1.28-1.96c-.28-.71-.474-1.49-.53-2.66-.06-1.27-.07-1.65-.07-4.85s.012-3.584.07-4.85c.056-1.17.25-1.95.53-2.66a5.41 5.41 0 0 1 1.28-1.96A5.41 5.41 0 0 1 4.49 2.8c.71-.28 1.49-.474 2.66-.53C8.416 2.212 8.8 2.2 12 2.2zm0 1.8c-3.135 0-3.5.012-4.73.07-1.13.056-1.74.24-2.15.4-.54.21-.92.46-1.32.86-.4.4-.65.78-.86 1.32-.16.41-.344 1.02-.4 2.15-.06 1.23-.07 1.595-.07 4.73s.012 3.5.07 4.73c.056 1.13.24 1.74.4 2.15.21.54.46.92.86 1.32.4.4.78.65 1.32.86.41.16 1.02.344 2.15.4 1.23.06 1.595.07 4.73.07s3.5-.012 4.73-.07c1.13-.056 1.74-.24 2.15-.4.54-.21.92-.46 1.32-.86.4-.4.65-.78.86-1.32.16-.41.344-1.02.4-2.15.06-1.23.07-1.595.07-4.73s-.012-3.5-.07-4.73c-.056-1.13-.24-1.74-.4-2.15a3.61 3.61 0 0 0-.86-1.32 3.61 3.61 0 0 0-1.32-.86c-.41-.16-1.02-.344-2.15-.4-1.23-.06-1.595-.07-4.73-.07zM12 6.8a5.2 5.2 0 1 1 0 10.4 5.2 5.2 0 0 1 0-10.4zm0 1.8a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8zM17.9 5.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"
+								/>
+							</svg>
+						</a>
+					</div>
+					<div class="d-flex align-self-stretch align-items-center ps-1">
+						<label
+							aria-label="Toggle Dark Mode"
+							class="p-2 jt-icon-center"
+							id="dark-toggler"
+							><i class="icon-mode jt-icon"></i
+						></label>
+					</div>
+					<div
+						class="d-flex align-self-stretch align-items-center position-md-relative"
+						id="search-header"
+					>
+						<input class="" id="search-toggle" type="checkbox" />
+						<label
+							aria-label="Toggle search"
+							class="p-2 check-text-primary hover-text-primary jt-icon-center"
+							for="search-toggle"
+							id="search-toggler"
+							><svg aria-hidden="true" class="fs-5 jt-icon"><use></use></svg
+						></label>
+						<div
+							class="dropdown-menu p-1 jt-border-light shadow-sm d-block-check"
+						>
+							<form
+								action="search.html"
+								class="input-group"
+								method="GET"
+								target="_top"
+							>
+								<input
+									class="form-control fs-7 border-0 rounded-0 bg-transparent text-reset"
+									id="search-input"
+									name="q"
+									placeholder="Enter your search"
+									required="required"
+									type="text"
+									value=""
+								/>
+								<input name="max-results" type="hidden" value="10" />
+								<button
+									class="btn btn-sm fw-bold py-2 px-4 rounded-pill border-0 jt-btn-primary m-0"
+									type="submit"
+								>
+									Search
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="d-flex align-self-stretch align-items-center d-lg-none">
+						<label
+							aria-label="Toggle navigation"
+							class="p-1 jt-icon-center hover-text-primary"
+							for="navbar-toggle"
+							id="navbar-toggler"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								class="fs-3 jt-icon"
+							>
+								<path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+							</svg>
+						</label>
+					</div>
+					<div id="menu-modal" class="modal">
+						<div class="modal-content">
+							<span class="close">&times;</span>
+							<ul
+								class="navbar-nav px-4 p-lg-0 container"
+								itemscope="itemscope"
+								itemtype="http://schema.org/SiteNavigationElement"
+							>
+								<li class="menu-item">
+									<a class="nav-link" href="/" itemprop="url">
+										<span itemprop="name">lawyer</span></a
+									>
+								</li>
+								<li class="menu-item">
+									<a class="nav-link" href="/" itemprop="url">
+										<span itemprop="name">Degree online</span></a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div
+					class="widget PageList collapse navbar-collapse"
+					data-version="2"
+					id="navbar"
+				>
+					<ul
+						class="navbar-nav px-4 p-lg-0 container"
+						itemscope="itemscope"
+						itemtype="http://schema.org/SiteNavigationElement"
+					>
+						<li class="menu-item">
+							<a class="nav-link" href="/" itemprop="url">
+								<span itemprop="name">lawyer</span></a
+							>
+						</li>
+						<li class="menu-item">
+							<a class="nav-link" href="/" itemprop="url">
+								<span itemprop="name">Degree online</span></a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main id="primary">
+			<div class="container px-0">
+				<div class="d-lg-flex" id="main-content">
+					<div class="col-lg-8 px-3" id="main">
+						<h1 class="d-none">Homepage Online degrees</h1>
+						<div class="pt-4 section" id="before-blog">
+							<div
+								class="widget FeaturedPost position-relative mb-4"
+								data-version="2"
+								id="FeaturedPost50"
+							>
+								<h2 class="widget-title fs-6 mb-3 text-uppercase fw-light">
+									<span>Featured Post</span>
+								</h2>
+								<div class="widget-content feature-posts">
+									<div class="d-sm-flex">
+										<div class="item-thumbnail pe-sm-3 col-sm-6">
+											<a
+												class="d-block jt-bg-light overflow-hidden rounded shadow-sm ratio ratio-1x1"
+												href="/"
+												rel="bookmark"
+											>
+												<img
+													alt="Houston injury lawyers"
+													class="lazyload"
+													data-src="images/pexels-photo-273204.jpg"
+													loading="lazy"
+													src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+												/>
+											</a>
+										</div>
+										<div
+											class="item-content p-4 py-sm-0 position-relative jt-border-light col-sm-6"
+										>
+											<div class="item-tag mb-3 fw-light text-secondary">
+												<a
+													class="text-reset text-decoration-none"
+													href="/"
+													rel="tag"
+												>
+													Lawyer
+												</a>
+											</div>
+											<h3 class="item-title mb-4 fs-2">
+												<a class="text-reset text-decoration-none" href="/"
+													>Houston injury lawyers</a
+												>
+											</h3>
+											<p class="item-snippet mb-3">
+												Houston injury lawyers &#160;- If you or a loved one has
+												been seriously injured due to someone else&#39;s actions
+												or negligence, you may be entit...
+											</p>
+											<div
+												class="item-meta text-secondary d-flex flex-wrap fw-light"
+											>
+												<small class="me-2"
+													><svg aria-hidden="true" class="me-1 jt-icon">
+														<use></use></svg
+													>liz truss
+												</small>
+												<small class="me-2"
+													><svg aria-hidden="true" class="me-1 jt-icon">
+														<use></use></svg
+													>2 Feb, 2024
+												</small>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pt-4 pb-5 section" id="blog-post">
+							<div class="widget Blog" data-version="2" id="Blog50">
+								<h2 class="widget-title fs-6 mb-3 text-uppercase fw-light">
+									<span>Latest Posts</span>
+								</h2>
+								<div class="widget-content">
+									<div class="row row-cols-sm-2" id="blog-content">
+										<article class="mb-4">
+											<div
+												class="h-100 overflow-hidden rounded position-relative border jt-border-light bg-archive shadow-sm"
+											>
+												<div class="item-thumbnail">
+													<a
+														class="jt-bg-light d-block ratio ratio-16x9"
+														href="/"
+														rel="bookmark"
+													>
+														<img
+															alt="Personal injury lawyers houston"
+															class="lazyload"
+															data-src="images/houston-2.jpg"
+															loading="lazy"
+															src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+														/>
+													</a>
+												</div>
+												<div class="item-content p-4">
+													<div class="item-tag mb-3 fw-light text-secondary">
+														<a
+															class="text-reset text-decoration-none"
+															href="/"
+															rel="tag"
+														>
+															Lawyer
+														</a>
+													</div>
+													<h3 class="item-title fs-5 mb-3">
+														<a class="text-reset text-decoration-none" href="/"
+															>Personal injury lawyers houston</a
+														>
+													</h3>
+													<p class="item-snippet mb-3">
+														Personal injury lawyers houston &#160;-&#160; If you
+														have been involved in a serious accident in Houston,
+														it is important to find the right personal i...
+													</p>
+													<div
+														class="item-meta text-secondary d-flex flex-wrap fw-light"
+													>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>liz truss
+														</small>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>10 Jun, 2023
+														</small>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article class="mb-4">
+											<div
+												class="h-100 overflow-hidden rounded position-relative border jt-border-light bg-archive shadow-sm"
+											>
+												<div class="item-thumbnail">
+													<a
+														class="jt-bg-light d-block ratio ratio-16x9"
+														href="/"
+														rel="bookmark"
+													>
+														<img
+															alt="Houston personal injury lawyers"
+															class="lazyload"
+															data-src="images/wp2073269.jpg"
+															loading="lazy"
+															src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+														/>
+													</a>
+												</div>
+												<div class="item-content p-4">
+													<div class="item-tag mb-3 fw-light text-secondary">
+														<a
+															class="text-reset text-decoration-none"
+															href="/"
+															rel="tag"
+														>
+															Lawyer
+														</a>
+													</div>
+													<h3 class="item-title fs-5 mb-3">
+														<a class="text-reset text-decoration-none" href="/"
+															>Houston personal injury lawyers</a
+														>
+													</h3>
+													<p class="item-snippet mb-3">
+														Houston personal injury lawyers &#160;-&#160;
+														Suffering an injury due to someone else&#39;s
+														negligence can be a difficult and stressful
+														experience. Th...
+													</p>
+													<div
+														class="item-meta text-secondary d-flex flex-wrap fw-light"
+													>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>liz truss
+														</small>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>2 Sep, 2023
+														</small>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article class="mb-4">
+											<div
+												class="h-100 overflow-hidden rounded position-relative border jt-border-light bg-archive shadow-sm"
+											>
+												<div class="item-thumbnail">
+													<a
+														class="jt-bg-light d-block ratio ratio-16x9"
+														href="/"
+														rel="bookmark"
+													>
+														<img
+															alt="Car accident lawyer moreno valley"
+															class="lazyload"
+															data-src="images/CHvxMCbW3UGQU91aqNH3I5AKCoY10RPEvNhacnpH.jpg"
+															loading="lazy"
+															src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+														/>
+													</a>
+												</div>
+												<div class="item-content p-4">
+													<div class="item-tag mb-3 fw-light text-secondary">
+														<a
+															class="text-reset text-decoration-none"
+															href="/"
+															rel="tag"
+														>
+															Lawyer
+														</a>
+													</div>
+													<h3 class="item-title fs-5 mb-3">
+														<a class="text-reset text-decoration-none" href="/"
+															>Car accident lawyer moreno valley</a
+														>
+													</h3>
+													<p class="item-snippet mb-3">
+														Car accident lawyer moreno valley &#160;- In
+														California, if you are injured in a motor vehicle
+														accident that was not your fault, you are
+														entitled...
+													</p>
+													<div
+														class="item-meta text-secondary d-flex flex-wrap fw-light"
+													>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>liz truss
+														</small>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>9 Jun, 2023
+														</small>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article class="mb-4">
+											<div
+												class="h-100 overflow-hidden rounded position-relative border jt-border-light bg-archive shadow-sm"
+											>
+												<div class="item-thumbnail">
+													<a
+														class="jt-bg-light d-block ratio ratio-16x9"
+														href="/"
+														rel="bookmark"
+													>
+														<img
+															alt="Car accident lawyer augusta"
+															class="lazyload"
+															data-src="images/19accident-lawyer-1024x575.jpg"
+															loading="lazy"
+															src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+														/>
+													</a>
+												</div>
+												<div class="item-content p-4">
+													<div class="item-tag mb-3 fw-light text-secondary">
+														<a
+															class="text-reset text-decoration-none"
+															href="/"
+															rel="tag"
+														>
+															Lawyer
+														</a>
+													</div>
+													<h3 class="item-title fs-5 mb-3">
+														<a class="text-reset text-decoration-none" href="/"
+															>Car accident lawyer augusta</a
+														>
+													</h3>
+													<p class="item-snippet mb-3">
+														Car accident lawyer augusta &#160;-&#160; Many car
+														accident victims quickly realize that&#160;the
+														insurance claims process&#160;is more complex than
+														they ever i...
+													</p>
+													<div
+														class="item-meta text-secondary d-flex flex-wrap fw-light"
+													>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>liz truss
+														</small>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>9 Jun, 2023
+														</small>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article class="mb-4">
+											<div
+												class="h-100 overflow-hidden rounded position-relative border jt-border-light bg-archive shadow-sm"
+											>
+												<div class="item-thumbnail">
+													<a
+														class="jt-bg-light d-block ratio ratio-16x9"
+														href="/"
+														rel="bookmark"
+													>
+														<img
+															alt="Parapsychology degree online"
+															class="lazyload"
+															data-src="images/parapsychology-750x410.jpg"
+															loading="lazy"
+															src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+														/>
+													</a>
+												</div>
+												<div class="item-content p-4">
+													<div class="item-tag mb-3 fw-light text-secondary">
+														<a
+															class="text-reset text-decoration-none"
+															href="/"
+															rel="tag"
+														>
+															Degree online
+														</a>
+													</div>
+													<h3 class="item-title fs-5 mb-3">
+														<a class="text-reset text-decoration-none" href="/"
+															>Parapsychology degree online</a
+														>
+													</h3>
+													<p class="item-snippet mb-3">
+														Parapsychology degree online &#160;- If you are
+														considering pursuing a degree in parapsychology
+														online, rest assured that there are very few opti...
+													</p>
+													<div
+														class="item-meta text-secondary d-flex flex-wrap fw-light"
+													>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>liz truss
+														</small>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>9 Jun, 2023
+														</small>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article class="mb-4">
+											<div
+												class="h-100 overflow-hidden rounded position-relative border jt-border-light bg-archive shadow-sm"
+											>
+												<div class="item-thumbnail">
+													<a
+														class="jt-bg-light d-block ratio ratio-16x9"
+														href="/"
+														rel="bookmark"
+													>
+														<img
+															alt="Personal injury attorney houston"
+															class="lazyload"
+															data-src="images/stock-footage-houston-circa-november-houston-texas-usa-highways-and-downtown-city-skyline.jpg"
+															loading="lazy"
+															src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+														/>
+													</a>
+												</div>
+												<div class="item-content p-4">
+													<div class="item-tag mb-3 fw-light text-secondary">
+														<a
+															class="text-reset text-decoration-none"
+															href="/"
+															rel="tag"
+														>
+															Lawyer
+														</a>
+													</div>
+													<h3 class="item-title fs-5 mb-3">
+														<a class="text-reset text-decoration-none" href="/"
+															>Personal injury attorney houston</a
+														>
+													</h3>
+													<p class="item-snippet mb-3">
+														Personal injury attorney houston &#160;- If you have
+														been injured due to someone else&#39;s negligence,
+														you may be entitled to seek compensation ...
+													</p>
+													<div
+														class="item-meta text-secondary d-flex flex-wrap fw-light"
+													>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>liz truss
+														</small>
+														<small class="me-2"
+															><svg aria-hidden="true" class="me-1 jt-icon">
+																<use></use></svg
+															>2 Feb, 2024
+														</small>
+													</div>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div
+										class="d-flex justify-content-center"
+										data-label=""
+										data-pagination="true"
+										data-posts="6"
+										id="pagination"
+									>
+										<div class="next-page">
+											<a
+												class="btn btn-sm jt-btn-primary border-2 py-2 px-5 fw-bold"
+												href="/"
+												>Next<svg aria-hidden="true" class="jt-icon">
+													<use></use></svg
+											></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div
+						class="col-lg-4 px-3 jt-border-light separator-main position-relative ms-auto"
+						content="itemid"
+						id="sidebar"
+						itemid="#sidebar"
+						itemscope="itemscope"
+						itemtype="https://schema.org/WPSideBar"
+					>
+						<div class="position-sticky py-4 top-0 section" id="sidebar-sticky">
+							<div
+								class="widget HTML position-relative mb-4"
+								data-version="2"
+								id="HTML8"
+							>
+								<div class="widget-content">
+									<div
+										class="example-ads jt-bg-light rounded text-center py-4 fs-7"
+									>
+										<ins
+											class="adsbygoogle"
+											style="display: block"
+											data-ad-client="ca-pub-6758689958963387"
+											data-ad-slot="2876057896"
+											data-ad-format="auto"
+										></ins>
+										<script>
+											(adsbygoogle = window.adsbygoogle || []).push({});
+										</script>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer
+			class="footer"
+			itemscope="itemscope"
+			itemtype="https://schema.org/WPFooter"
+		>
+			<hr style="display: block" />
+			<div style="margin: 0 auto">
+				<center>
+					<div class="badge">
+						<a
+							class="dmca-badge"
+							href="https://www.dmca.com/Protection/Status.aspx?ID=f363f5cb-4cae-467e-8a7d-84436782621f"
+							title="Check blog Protection Status"
+						>
+							<img
+								alt="DMCA.com Protection Status"
+								src="images/dmca_protected_sml_120r_ID-f363f5cb-4cae-467e-8a7d-84436782621f.png"
+						/></a>
+					</div>
+					<div class="badge2" style="font-size: 11px">
+						<a href="/">contact </a> |
+						<a href="/">Disclaimer </a>
+						|
+						<a href="/">privacy policy </a>
+					</div>
+					<div class="credit">
+						<p>
+							Copyright &#169; 2024
+							<a href="/" itemprop="url" title=""
+								><span itemprop="copyrightHolder">Online degrees</span></a
+							>. All rights reserved.
+						</p>
+					</div>
+				</center>
+			</div>
+		</footer>
+
+		<div
+			class="position-fixed"
+			id="back-to-top"
+			style="right: 20px; bottom: 20px"
+		>
+			<a
+				aria-label="Back to Top"
+				class="btn btn-sm jt-btn-light rounded-circle jt-icon-center"
+				href="#back-to-top"
+				onclick="window.scroll({top:0,left: 0,behavior:'smooth'});"
+			>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="40"
+					height="40"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+				>
+					<path d="M12 4l-6 6h4v6h4v-6h4l-6-6z" />
+				</svg>
+			</a>
+		</div>
+
+		<script>
+			//<![CDATA[
+			!(function (r, i, t) {
+				var u,
+					o = /^data-(.+)/,
+					a = 'IntersectionObserver',
+					c = /p/.test(i.readyState),
+					s = [],
+					f = s.slice,
+					l = 'lazied',
+					n = 'load',
+					e = 'pageshow',
+					d = 'forEach',
+					h = 'hasAttribute',
+					m = 'shift';
+				function v(e) {}
+				function p(e, n) {
+					f.call(e.attributes)[d](n);
+				}
+				function y(e, n, t, o) {
+					return (
+						(o = (o = n ? i.getElementById(n) : o) || i.createElement(e)),
+						n && (o.id = n),
+						t && (o.onload = t),
+						o
+					);
+				}
+				function b(e, n) {
+					return f.call((n || i).querySelectorAll(e));
+				}
+				function I(t, e) {
+					b('source', t)[d](I),
+						p(t, function (e, n) {
+							(n = o.exec(e.name)) && (t[n[1]] = e.value);
+						}),
+						e && (t.className += ' ' + e),
+						n in t && t[n]();
+				}
+				function g(e) {
+					u(function (o) {
+						(o = b(e || '[type=deferjs]')),
+							(function e(n, t) {
+								(n = o[m]()) &&
+									(n.parentNode.removeChild(n),
+									((t = y(n.nodeName)).text = n.text),
+									p(n, function (e) {
+										'type' != e.name && (t[e.name] = e.value);
+									}),
+									t.src && !t[h]('async')
+										? ((t.onload = t.onerror = e), v(t))
+										: (v(t), e()));
+							})();
+					});
+				}
+				((u = function (e, n) {
+					c ? t(e, n) : s.push(e, n);
+				}).all = g),
+					(u.js = function (n, t, e, o) {
+						u(function (e) {
+							((e = y('SCRIPT', t, o)).src = n), v(e);
+						}, e);
+					}),
+					(u.css = function (n, t, e, o) {
+						u(function (e) {
+							((e = y('LINK', t, o)).rel = 'stylesheet'), (e.href = n), v(e);
+						}, e);
+					}),
+					(u.dom = function (e, n, t, z, o, i) {
+						function c(e) {
+							(o && !1 === o(e)) || I(e, t);
+						}
+						u(function (t) {
+							(t =
+								a in r &&
+								new r[a](function (e) {
+									e[d](function (e, n) {
+										e.isIntersecting &&
+											(n = e.target) &&
+											(z && z(n), t.unobserve(n), c(n));
+									});
+								}, i)),
+								b(e || '[data-src]')[d](function (e) {
+									e[h](l) || (e.setAttribute(l, ''), t ? t.observe(e) : c(e));
+								});
+						}, n);
+					}),
+					(u.reveal = I),
+					(r.Defer = u),
+					r.addEventListener('on' + e in r ? e : n, function () {
+						for (g(); s[0]; t(s[m](), s[m]())) c = 1;
+					});
+			})(this, document, setTimeout);
+			'IntersectionObserver' in window ||
+				document.write(
+					'<script src="v3/polyfill.min_features-IntersectionObserver.js"><\/script>'
+				);
+			function related_temp(e) {
+				return `${e.title ? `<div class='widget-title mb-3 text-uppercase fw-light'><span>${e.title}</span></div>` : ``}
+			<div class='row row-cols-sm-2'>
+			${e.posts
+				.map(function (data, i) {
+					return `<article class='mb-4'>
+			<div class='h-100 overflow-hidden rounded position-relative border jt-border-light bg-archive shadow-sm'>
+			${
+				data.img
+					? `
+			<div class='item-thumbnail'><a class='jt-bg-light d-block ratio ratio-21x9' href='${data.url}'><img alt='${data.title}' class='object-cover lazy-${data.grup_id} lazyload' data-src='${data.img}' loading='lazy' src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='/></a></div>`
+					: ``
+			}
+			<div class='item-content p-4'>
+			<h2 class='item-title fs-6 mb-2' itemprop='headline'><a class='text-reset text-decoration-none' href='${data.url}'>${data.title}</a></h2>
+			<div class='item-meta text-secondary d-flex flex-wrap fw-light'><small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-user'/></svg>${data.author}</small><small class='me-2'><svg aria-hidden='true' class='me-1 jt-icon'><use xlink:href='#i-clock'/></svg>${data.date}</small></div>
+			</div>
+			</div>
+			</article>`;
+				})
+				.join('')}
+			</div>`;
+			}
+			function sitemap_temp(e) {
+				return `<div class='accordion'>
+			${e.categories
+				.map(function (data, i) {
+					return `<div class='accordion-item'>
+			<input ${i == 0 ? 'checked' : ''} id='sitemap-list-${i}' name='sitemap' type='radio' class='d-none'/>
+			<label for='sitemap-list-${i}' class='accordion-header accordion-button collapsed'>${data.term}</label>
+			<div class='accordion-collapse collapse border-top jt-border-light d-block-check'>
+			<div class='accordion-body'>
+			<div class='sitemap-list' data-label='${data.term}' data-func='sitemap_list_temp' data-items='9999'>
+			<div class='text-center'>
+			<div class='spinner-grow text-light' role='status'>
+			
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>`;
+				})
+				.join('')}
+			</div>`;
+			}
+			function sitemap_list_temp(e) {
+				return `<ul class="list-unstyled fs-7">
+			${e.posts
+				.map(function (data, i) {
+					return `<li class="mb-2"><a href="${data.url}">${data.title}</a></li>`;
+				})
+				.join('')}
+			</ul>`;
+			}
+			function sitemap_cb(e) {
+				var sm = '.sitemap-list';
+				if (document.querySelector(sm) !== null) {
+					Defer.dom(sm, 100, 'loaded', jo.loadCustomPosts);
+				}
+			}
+			function related_inline_temp(e) {
+				return `<div class='px-3 py-2 mb-4 border border-3 jt-border-light rounded'>
+			${e.title ? `<div class='fw-light pb-3'><span>${e.title}</span></div>` : ``}
+			<ul class='ps-3 fw-bold'>
+			${e.posts
+				.map(function (data, i) {
+					return `
+			<li class='mb-2'>
+			<a class='text-decoration-none' href='${data.url}'>${data.title}</a>
+			</li>
+			`;
+				})
+				.join('')}
+			</ul></div>`;
+			}
+			function toc_temp(e) {
+				var hc = 0;
+				var l = 1;
+				return `<div id='toc-post' class="d-inline-block px-3 py-2 mb-4 jt-bg-light rounded">
+			<input id="toc-toggle" class="d-none" autocomplete="off" type="checkbox"/>
+			<label for="toc-toggle" id="toc-toggler" class="toc-toggler d-flex align-items-center">
+			<span class="fw-light pe-3">On this Content</span>
+			<span class="dropdown-toggle ms-auto"></span>
+			</label>
+			${e
+				.map(function (data, i) {
+					var n = data.level;
+					var text = '';
+					if (i == 0) {
+						text += '<ul class="ps-3 pt-3 d-none d-block-check fs-7">';
+					} else if (hc < n) {
+						text += '<ul class="ps-3 pt-2 fs-8"><li>';
+						l++;
+					} else if (hc > n && l > 1) {
+						for (var m = 0; m < hc - n; m++) {
+							text += '</li></ul>';
+						}
+						l--;
+					}
+					hc = n;
+					text += i > 0 ? '</li>' : '';
+					text += '<li class="mb-2">';
+					text +=
+						'<a class="text-reset text-decoration-none hover-text-primary" href="#' +
+						data.id +
+						'">' +
+						data.title +
+						'</a>';
+					if (i == e.length - 1) {
+						for (var j = 1; j < hc; j++) {
+							text += '</li></ul>';
+						}
+					}
+					return text;
+				})
+				.join('')
+				.replace(/<li>\s*<\/li>/gi, '')}
+			</div>`;
+			}
+			function jtCallback() {
+				/*Your Script is here to maintain performance.*/
+				// the example below if you use url.
+				// Defer.css('your_css_url','your-style-id',100);
+				// Defer.js('your_script_url','your-script-id',100);
+			}
+			//]]>
+		</script>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>
