@@ -1,2 +1,2 @@
-#Online degrees
+Online degrees
 
